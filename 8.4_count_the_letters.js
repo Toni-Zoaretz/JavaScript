@@ -5,11 +5,11 @@
 function countDuplicat(arr) {
   let objDuplicate = {};
   const str = arr.join();
-  const arr1 = str.split("");
+  const arr1 = str.split(" ");
   let letter = [];
   let count = 1;
   for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] === arr1[1 + 1]) {
+    if (arr1[i] === arr1[i + 1]) {
       count++;
     } else {
       let value = `${count}${arr1[i]}`;
@@ -20,4 +20,6 @@ function countDuplicat(arr) {
   return (objDuplicate = Object.assign({}, letter));
 }
 
-console.log(countDuplicat(["toni", "toni"]));
+console.log(
+  countDuplicat(["Hello", "Good Day", "Your Welcome", "hotdog", "hamburgers"])
+);

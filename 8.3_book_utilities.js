@@ -1,31 +1,24 @@
 const book1 = {
-  bookName: "world",
+  name: "world1",
   author: "toni",
   year: 2012,
 };
 
 const book2 = {
-  bookName: "wordls2",
-  author: "toni2",
-  year: 2011,
-  bookUtils: "",
+  name: "word2",
+  author: "toni",
+  year: 2010,
 };
 
 const bookUtils = {
-  getFirstPublished: function (book1, book2) {
-    if (book1.year > book2.year) {
-      return book1;
-    } else {
-      return book2;
-    }
+  setNewEdition: function (book, edtionYear) {
+    book["latestEdition"] = edtionYear;
   },
 
-  setNewEdition: function (book, edtionYear) {},
+  setLanguage: function (book, language) {
+    book["language"] = language;
+  },
+  setTranslation: function (book, language, translator) {
+    book["translation"] = { translator: translator, language: language };
+  },
 };
-
-console.log(bookUtils.getFirstPublished(book1, book2));
-
-/*add to the bookUtils object a function setNewEdition, that
-receives a book and an edition year and sets a new
-property latestEdition with the edition year, or updates an
-existing one.*/
