@@ -21,13 +21,13 @@ const candyStore = {
 //   return candyById;
 // }
 
-// function getCandy(candyStore, id) {
-//   const price1 = candyStore.candies.find((p) => p.price === id);
-//   return price1;
-// }
+function getCandy(candyStore, id) {
+  const candyPrice = candyStore.candies.find((price) => price.id === id);
+  return price.price;
+}
 
-// console.log(getCandy(candyStore, "5hd7y"));
+console.log(getCandy(candyStore, "5hd7y"));
 
-function addCandy(candyStore, id, name, price) {}
+// function addCandy(candyStore, id, name, price) {}
 
-console.log(addCandy(candyStore, "d4ew", "mars", 1));
+// console.log(addCandy(candyStore, "d4ew", "mars", 1));
