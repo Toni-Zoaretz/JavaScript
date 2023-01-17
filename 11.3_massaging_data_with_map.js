@@ -64,10 +64,10 @@ const data = [
 // favoriteFoods
 function food(obj) {
   let foorResult = [];
-  obj.forEach(function (isItFood) {
+  const obj1 = obj.map(function (isItFood) {
     foorResult.push(isItFood.favoriteFoods.fish, isItFood.favoriteFoods.meats);
+    return foorResult;
   });
-  return foorResult;
 }
 
 console.log(food(data));
