@@ -50,17 +50,55 @@ case-sensitive.*/
 
 // console.log(strToUpperCase.join());
 
-const str = "pizza apple powder glass";
-const arr = str.split(" ");
-// console.log(arr);
-let answer = [];
-arr.forEach(function (x, i) {
-  if (i % 2 === 0) {
-    answer.push(x.toLowerCase());
-  }
-  if (i % 2 !== 0) {
-    answer.push(x.toUpperCase());
-  }
-});
+// const str = "pizza apple powder glass";
+// const arr = str.split(" ");
+// // console.log(arr);
+// let answer = [];
+// arr.forEach(function (x, i) {
+//   if (i % 2 === 0) {
+//     answer.push(x.toLowerCase());
+//   }
+//   if (i % 2 !== 0) {
+//     answer.push(x.toUpperCase());
+//   }
+// });
 
-console.log(answer);
+// console.log(answer);
+// *********************************lily************************
+// function vowelCount(str) {
+//   let result = {};
+//   const arr = str.split("");
+//   arr.forEach(function (x) {
+//     let lower = x.toLowerCase();
+//     if (
+//       lower === "a" ||
+//       lower === "o" ||
+//       lower === "u" ||
+//       lower === "i" ||
+//       lower === "e"
+//     ) {
+//       if (result[lower]) {
+//         result[lower] = result[lower] + 1;
+//       } else {
+//         result[lower] = 1;
+//       }
+//     }
+//   });
+//   return result;
+// }
+
+// console.log(vowelCount("aaanjllloui"));
+// *********************lilt*****************************
+
+// function shiftLetters(str) {
+//   let arr = str.split("");
+//   let shiftStr = "";
+//   arr.forEach(function (x, index) {
+//     let codeNumber = str.charCodeAt(index);
+//     let newChar = String.fromCharCode(codeNumber - 1);
+//     shiftStr = shiftStr + newChar;
+//   });
+//   return shiftStr;
+// }
+
+// console.log(shiftLetters("bcv"));
