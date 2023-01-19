@@ -41,6 +41,58 @@ const data = [
   },
 ];
 
+function getonlyName(arr) {
+  // let arrName = [];
+  const arrName = arr.map(function (x) {
+    return x.name;
+  });
+  return arrName;
+}
+
+console.log(getonlyName(data));
+
+function bornBefor1990(arr) {
+  const result = arr.filter(function (x) {
+    let birthYear = Number(x.birthday.slice(-4));
+    if (birthYear < 1990) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return result;
+}
+
+console.log(bornBefor1990(data));
+
+function countFood(arr) {
+  const allTheFood = {};
+  data.forEach(function (person) {
+    let meats = person.favoriteFoods.meats;
+    let fisheArr = person.favoriteFoods.fish;
+
+    meats.forEach(function (meat) {
+      if (allTheFood[meat]) {
+        allTheFood[meat] = allTheFood[meat] + 1;
+      } else {
+        allTheFood[meat] = 1;
+      }
+    });
+
+    fisheArr.forEach(function (fish) {
+      if (allTheFood[fish]) {
+        allTheFood[fish] = allTheFood[fish] + 1;
+      } else {
+        allTheFood[fish] = 1;
+      }
+    });
+  });
+
+  return allTheFood;
+}
+
+console.log(countFood(data));
+
 // function getNames(data) {
 //   const nameResult = data.map(function (x) {
 //     return x.name;
@@ -62,12 +114,13 @@ const data = [
 
 // console.log(years(data));
 // favoriteFoods
-function food(obj) {
-  let foorResult = [];
-  const obj1 = obj.map(function (isItFood) {
-    foorResult.push(isItFood.favoriteFoods.fish, isItFood.favoriteFoods.meats);
-    return foorResult;
-  });
-}
 
-console.log(food(data));
+// function food(obj) {
+//   let foorResult = [];
+//   const obj1 = obj.map(function (isItFood) {
+//     foorResult.push(isItFood.favoriteFoods.fish, isItFood.favoriteFoods.meats);
+//     return foorResult;
+//   });
+// }
+
+// console.log(food(data));

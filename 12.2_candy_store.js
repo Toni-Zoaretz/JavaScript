@@ -16,17 +16,29 @@ const candyStore = {
   cashRegister: 200,
 };
 
-// function getCandy(candyStore, id) {
-//   const candyById = candyStore.candies.find((candy) => candy.id === id);
-//   return candyById;
-// }
-
 function getCandy(candyStore, id) {
-  const candyPrice = candyStore.candies.find((price) => price.id === id);
-  return price.price;
+  const candyEllement = candyStore.candies.find(function (el) {
+    if (el.id === id) {
+      return true;
+    }
+  });
+
+  return candyEllement;
 }
 
 console.log(getCandy(candyStore, "5hd7y"));
+
+// // function getCandy(candyStore, id) {
+// //   const candyById = candyStore.candies.find((candy) => candy.id === id);
+// //   return candyById;
+// // }
+
+// function getCandy(candyStore, id) {
+//   const candyPrice = candyStore.candies.find((price) => price.id === id);
+//   return price.price;
+// }
+
+// console.log(getCandy(candyStore, "5hd7y"));
 
 // function addCandy(candyStore, id, name, price) {}
 
