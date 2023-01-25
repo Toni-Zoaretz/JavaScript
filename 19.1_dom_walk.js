@@ -11,8 +11,8 @@ const add = document.querySelector(".first-ul");
 const li = (document.createElement("li").innerHTML = "sub btitle 4");
 add.append(li);
 
-const del = document.querySelector(".li-remove");
-del.classList.remove("li-remove");
+const del = document.querySelector("ul");
+del.lastElementChild.remove();
 
 const title = document.querySelector("title");
 title.innerHTML = "Master Of The Dom!";
