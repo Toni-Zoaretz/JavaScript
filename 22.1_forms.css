@@ -1,0 +1,7 @@
+.text-box {
+  /* background-color: rgb(205, 129, 14); */
+  border: 1px solid pink;
+  width: 250px;
+  height: 250px;
+  visibility: hidden;
+}
