@@ -15,15 +15,15 @@ td.active {
 }
 
 #player1-race > td.active {
-  background-image: url(/player_1.png);
+  background-image: url("/player_1.png");
 }
 
 #player2-race td.active {
-  background-image: url(/player_2.png);
+  background-image: url("/player_2.png");
 }
 
 td:last-child {
-  background-image: url(/finish.png);
+  background-image: url("/finish.png");
   background-size: cover;
 }
 
@@ -33,9 +33,9 @@ td:last-child.active {
 }
 
 #player1-race td:last-child.active {
-  background-image: url(/player_1.png), url(/finish.png);
+  background-image: url("/player_1.png"), url("/finish.png");
 }
 
 #player2-race td:last-child.active {
-  background-image: url(/player_2.png), url(/finish.png);
+  background-image: url("/player_2.png"), url("/finish.png");
 }
