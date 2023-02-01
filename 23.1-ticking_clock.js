@@ -9,10 +9,6 @@ let min = today.getMinutes();
 let hours = today.getHours();
 let secId;
 
-// today.getSeconds();
-// today.getHours();
-// today.getMinutes();
-
 function seconde() {
   secId = setInterval(function () {
     sec++;
@@ -20,10 +16,6 @@ function seconde() {
     chectime();
   }, 1000);
 }
-
-// .getHours()
-// .getSeconds()
-// .getMinutes()
 
 console.log(seconde());
 
@@ -39,27 +31,3 @@ function chectime() {
     hour.textContent = hours;
   }
 }
-
-// let mins = 0;
-// let minId;
-
-// function min() {
-//   minId = setInterval(function () {
-//     mins++;
-//     minutes.innerText = mins;
-//   }, 2000);
-// }
-
-// console.log(min());
-
-// let hour1 = 0;
-// let hourId;
-
-// function hores() {
-//   hourId = setInterval(function () {
-//     hour1++;
-//     hour.innerText = hour1;
-//   }, 3000);
-// }
-
-// console.log(hores());
