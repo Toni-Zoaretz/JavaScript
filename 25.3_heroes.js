@@ -16,5 +16,9 @@ function printName() {
 // printHeroes function:
 // Note: you cannot change the super heroes objects
 function printHeroes(heroes, printFunc) {
-  //add your code here
+  for (let i = 0; i < heroes.length; i++) {
+    printFunc.call(heroes[i]);
+  }
 }
+
+printHeroes(superHeroes, printName);
