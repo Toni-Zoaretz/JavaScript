@@ -9,10 +9,10 @@
 
 function makeAllCaps(arrOfWords) {
   return new Promise((resolve, reject) => {
-    if (arrOfWords.some((word) => typeof word !== "string")) {
-      reject(new Error("NOT A STRING"));
-    } else {
+    if (arrOfWords.every((word) => typeof word === "string")) {
       resolve(arrOfWords.map((word) => word.toUpperCase()));
+    } else {
+      reject(new Error("NOT A STRING"));
     }
   });
 }
