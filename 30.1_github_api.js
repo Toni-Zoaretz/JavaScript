@@ -30,5 +30,4 @@ async function getData(userName) {
     name.textContent = data.name;
     reposNumber.textContent = `Repos: ${data.public_repos}`;
   });
-  // console.log(response);
 }
